@@ -1,0 +1,22 @@
+/*
+* @Author: sophie
+* @Date:   2018-04-27 11:30:20
+* @Last Modified by:   sophie
+* @Last Modified time: 2018-04-27 11:40:53
+*/
+.footer{
+    padding-bottom: 10px;
+}
+.footer .links{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
+.footer .link{
+    padding: 0 10px;
+}
+.footer .copyright{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
