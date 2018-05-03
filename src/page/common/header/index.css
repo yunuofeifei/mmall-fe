@@ -2,7 +2,7 @@
 * @Author: sophie
 * @Date:   2018-04-27 15:04:59
 * @Last Modified by:   sophie
-* @Last Modified time: 2018-04-27 16:01:25
+* @Last Modified time: 2018-05-02 13:17:09
 */
 /*通用头部导航*/
 .header .logo{
@@ -13,6 +13,7 @@
     left: 60px;
     top: 34px;
     font-weight: bold;
+    text-decoration: none;
 }
 .header .search-con{
     padding: 40px 0 30px 250px;
@@ -30,4 +31,14 @@
     position: absolute;
     height: 44px;
     width: 80px;
+}
+/*面包屑导航*/
+.crumb{
+    margin-bottom: 15px;
+    height: 50px;
+    line-height: 50px;
+    background: #eee;
+    color: #888;
+    font-size: 14px;
+    border-top: 2px solid #c60023;
 }

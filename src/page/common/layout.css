@@ -2,7 +2,7 @@
 * @Author: sophie
 * @Date:   2018-04-26 10:37:28
 * @Last Modified by:   sophie
-* @Last Modified time: 2018-04-27 15:33:08
+* @Last Modified time: 2018-05-02 13:29:59
 */
 /*css reset*/
 *{
@@ -35,6 +35,23 @@ input[type='checkbox']{
     overflow: hidden;/*1.超出边界的内容不显示，
     2.清除浮动,若两个float:left的话，外容器没有高度，
     加上overflow外容器高度被里面元素撑起来*/
+}
+/*panel*/
+.panel{
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.panel .panel-title{
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+.panel .panel-body{
+    padding: 10px;
+    overflow: hidden;
 }
  /*全局通用样式*/
  /*隐藏类*/

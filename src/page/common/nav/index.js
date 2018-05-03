@@ -2,7 +2,7 @@
 * @Author: sophie
 * @Date:   2018-04-26 20:10:13
 * @Last Modified by:   sophie
-* @Last Modified time: 2018-04-27 11:03:56
+* @Last Modified time: 2018-05-03 10:45:52
 */
 'use strict'
 require('./index.css');
@@ -25,7 +25,7 @@ var nav = {
        });
         //注册点击事件
         $('.js-register').click(function(){
-            window.location.href = './register.html';
+            window.location.href = './user-register.html';
         });
         //退出点击事件
         $('.js-logout').click(function(){

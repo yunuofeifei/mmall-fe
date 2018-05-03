@@ -2,7 +2,7 @@
 * @Author: sophie
 * @Date:   2018-04-25 16:00:46
 * @Last Modified by:   sophie
-* @Last Modified time: 2018-04-27 09:45:09
+* @Last Modified time: 2018-05-02 14:32:07
 */
 "use strict"
 var Hogan = require('hogan.js');
@@ -62,10 +62,6 @@ var _mm = {
     errorTip : function(msg){
         alert(msg || '哪里不对了~');
     },
-    //字段的验证，支持是否为空、手机、邮箱
-    validate : function(value, type){
-
-    },
     //字段的验证，支持非空、手机、邮箱的判断
     validate : function(value, type){
         var value = $.trim(value);
@@ -83,11 +79,11 @@ var _mm = {
     },
     //统一登陆处理
     doLogin : function(){
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href); 
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href); 
     },
     goHome : function(){
         window.location.href = './index.html';
     }
 };
 
-module.exports = _mm;
+ module.exports = _mm;
