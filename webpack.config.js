@@ -2,7 +2,7 @@
 // * @Author: sophie
 // * @Date:   2018-04-21 12:18:44
 // * @Last Modified by:   sophie
-// * @Last Modified time: 2018-05-05 19:30:15
+// * @Last Modified time: 2018-05-06 11:20:37
 // */
 
 var webpack             = require('webpack');
@@ -26,6 +26,7 @@ var config = {
     entry: {
         "index"             : ["./src/page/index/index.js"],
         "list"              : ["./src/page/list/index.js"],
+        "cart"              : ["./src/page/cart/index.js"],
         "user-login"        : ["./src/page/user-login/index.js"],
         "user-register"     : ["./src/page/user-register/index.js"],
         "detail"            : ["./src/page/detail/index.js"],
@@ -81,6 +82,7 @@ var config = {
             //HTML模板的处理
             new HtmlWebpackPlugin(getHtmlConfig("index" , "首页")),
             new HtmlWebpackPlugin(getHtmlConfig("list" , "商品列表页")),
+            new HtmlWebpackPlugin(getHtmlConfig("cart" , "购物车")),
             new HtmlWebpackPlugin(getHtmlConfig("detail" , "商品详情页")),
             new HtmlWebpackPlugin(getHtmlConfig("user-login", "用户登录")),
             new HtmlWebpackPlugin(getHtmlConfig("user-register", "用户注册")),

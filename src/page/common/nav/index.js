@@ -2,7 +2,7 @@
 * @Author: sophie
 * @Date:   2018-04-26 20:10:13
 * @Last Modified by:   sophie
-* @Last Modified time: 2018-05-03 10:45:52
+* @Last Modified time: 2018-05-07 21:32:01
 */
 'use strict'
 require('./index.css');
@@ -48,9 +48,9 @@ var nav = {
     //加载购物车数量
     loadCartCount : function(){
          _cart.getCartCount(function(res){
-            $('.nav cart-count').text(res || 0);
+            $('.cart-count').text(res || 0);
         }, function(errMsg){
-            $('.nav .cart-count').text(0);
+            $('.cart-count').text(0);
         });
     }
 };
