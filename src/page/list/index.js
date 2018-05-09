@@ -2,7 +2,7 @@
 * @Author: sophie
 * @Date:   2018-05-03 21:06:52
 * @Last Modified by:   sophie
-* @Last Modified time: 2018-05-05 19:36:49
+* @Last Modified time: 2018-05-09 16:31:35
 */
 'use strict'
 require('./index.css');
@@ -77,11 +77,11 @@ var page = {
             listParam.categoryId 
             ? (delete listParam.keyword) : (delete listParam.categoryId);
             // 请求接口
-            console.log(listParam);
-            _product.getProductList(listParam, function(res){
-            listHtml = _mm.renderHtml(templateIndex, {
+             _product.getProductList(listParam, function(res){
+                var a = {
                 list : res.list
-            });
+            };
+            listHtml = _mm.renderHtml(templateIndex, a);
             $pListCon.html(listHtml);
             _this.loadPagination({
                 hasPreviousPage  : res.hasPreviousPage,

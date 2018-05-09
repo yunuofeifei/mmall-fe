@@ -2,7 +2,7 @@
 * @Author: sophie
 * @Date:   2018-05-05 19:31:13
 * @Last Modified by:   sophie
-* @Last Modified time: 2018-05-07 21:35:52
+* @Last Modified time: 2018-05-09 16:28:52
 */
 'use strict'
 require('./index.css');
@@ -78,12 +78,11 @@ var page = {
                 newCount  = 0;
              if(type === 'plus'){
                 if(currCount >= maxCount){
-                  _mm.errTip('该商品数量达到上限');
+                  _mm.errorTip('该商品数量达到上限');
                   return;
                 }
                 newCount = currCount + 1;
-                console.log(currCount);
-             } else if(type === 'minus'){
+                 } else if(type === 'minus'){
                 if(currCount <= minCount){
                   return;
                 }
@@ -94,6 +93,32 @@ var page = {
              _cart.updateProduct({
                 productId : productId,
                 count     : newCount
+             },function(res){
+                  _this.renderCart(res);
+              }, function(errMsg){
+                  _this.showCartError();
+              });
+        });
+        // 商品数量的变化
+        $(document).on('mouseout', '.count-input',function(){
+            var $this     = $(this),
+                currCount = parseInt($this.val()),
+                productId = $this.parents('.cart-table').data('product-id'),
+                newCount  = 0,
+                minCount  = 1,
+                maxCount =  parseInt($this.data('max'));
+            
+                if(currCount >= maxCount){
+                   currCount = maxCount;
+                    _mm.errorTip('该商品数量达到上限');
+                 } else if(currCount <= minCount){
+                  currCount = 1;
+                  }             
+               
+              // 更新购物车商品数量
+             _cart.updateProduct({
+                productId : productId,
+                count     :  currCount
              },function(res){
                   _this.renderCart(res);
               }, function(errMsg){
@@ -131,7 +156,7 @@ var page = {
         $(document).on('click', '.submit-btn', function(){
             // 总价大于0，进行提交
             if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0){
-                window.location.href = './confirm.html';
+                window.location.href = './order-confirm.html';
             }else{
               _mm.errorTip('请选择商品后提交');
             }
