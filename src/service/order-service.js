@@ -2,7 +2,7 @@
 * @Author: sophie
 * @Date:   2018-05-08 09:27:02
 * @Last Modified by:   sophie
-* @Last Modified time: 2018-05-10 10:13:22
+* @Last Modified time: 2018-05-10 14:37:14
 */
 'use strict'
 var _mm = require('util/mm.js');
@@ -46,11 +46,11 @@ var _order = {
         })
     },
     // 取消订单
-    cancelOrder: function(orderNumber, resolve, reject){
+    cancelOrder : function(orderNumber, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/order/cancel.do'),
             data    : {
-                orderNo  : orderNumber
+                orderNo : orderNumber
             },
             success : resolve,
             error   : reject
