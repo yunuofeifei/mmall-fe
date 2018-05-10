@@ -2,7 +2,7 @@
 * @Author: sophie
 * @Date:   2018-05-08 09:27:02
 * @Last Modified by:   sophie
-* @Last Modified time: 2018-05-09 21:29:23
+* @Last Modified time: 2018-05-10 10:13:22
 */
 'use strict'
 var _mm = require('util/mm.js');
@@ -54,7 +54,7 @@ var _order = {
             },
             success : resolve,
             error   : reject
-        })
+        });
     }
 };
 

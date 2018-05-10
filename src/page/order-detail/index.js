@@ -2,7 +2,7 @@
 * @Author: sophie
 * @Date:   2018-05-02 12:48:33
 * @Last Modified by:   sophie
-* @Last Modified time: 2018-05-09 22:01:43
+* @Last Modified time: 2018-05-10 10:08:58
 */
 'use strict'
 require('./index.css');
@@ -36,7 +36,7 @@ var para = {
                  _order.cancelOrder(_this.data.orderNumber, function(res){
                     _mm.successTip('该订单取消成功');
                     _this.loadDetail();
-                }, function(errMsg){
+                },function(errMsg){
                     _mm.errorTip(errMsg);
                 });
             };

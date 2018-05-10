@@ -2,7 +2,7 @@
 * @Author: sophie
 * @Date:   2018-04-29 20:20:51
 * @Last Modified by:   sophie
-* @Last Modified time: 2018-04-30 14:10:28
+* @Last Modified time: 2018-05-10 10:59:12
 */
 'use strict'
 require('./index.css');
@@ -11,7 +11,12 @@ var _mm = require('util/mm.js');
 
 $(function(){
     var type = _mm.getUrlParam('type') || 'default',
-    $element = $('.' + type + '-success');
+        $element = $('.' + type + '-success');
+    if(type === 'payment'){
+        var orderNumber  = _mm.getUrlParam('orderNumber'),
+            $orderNumber = $element.find('.order-number');
+        $orderNumber.attr('href', $orderNumber.attr('href') + orderNumber);
+    }
     // 显示对应的提示元素
     $element.show();
 });
